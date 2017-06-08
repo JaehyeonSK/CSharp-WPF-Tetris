@@ -1,0 +1,32 @@
+﻿<Window x:Class="Tetris.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d" Background="Gray" ResizeMode="NoResize"
+        Title="도움말" Height="300" Width="300">
+    <Grid Margin="10" Background="AliceBlue">
+        <TextBlock Margin="10" Padding="10"
+                   FontSize="18"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            ←  → : 블록 좌우 이동 <LineBreak/>
+            ↑ : 블록 방향 변경 <LineBreak/>
+            ↓ : 블록 빠르게 내리기 <LineBreak/>
+            space : 블록 바로 내리기 <LineBreak/>
+            p or P : 게임 일시정지 <LineBreak/>
+            h or H : 블록 홀드
+        </TextBlock>
+        <Border 
+            Width="50"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15"
+            CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness="1">
+            <Button 
+                Style="{StaticResource RadialButton}"
+                Content="닫기"
+                Click="CloseClicked"/>
+        </Border>
+        
+    </Grid>
+</Window>
