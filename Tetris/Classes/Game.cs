@@ -186,7 +186,7 @@ namespace Tetris.Classes
                         clk = 0;
                         break;
                     default:
-                        return;
+                        break;
                 }
 
                 Controller.InputKey = null;

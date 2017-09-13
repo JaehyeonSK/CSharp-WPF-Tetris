@@ -408,5 +408,10 @@ namespace Tetris
                 rootGrid.Background = new SolidColorBrush(color);
             }
         }
+
+        private void MultiClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

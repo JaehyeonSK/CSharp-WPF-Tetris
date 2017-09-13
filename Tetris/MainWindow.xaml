@@ -50,6 +50,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Margin="10 10 10 0" Text="Score" FontSize="17" FontWeight="bold"/>
             <TextBlock Name="tbScore" Grid.Row="1" Margin="10 0 10 0" Text="0" HorizontalAlignment="Right" FontSize="18"/>
@@ -60,18 +61,17 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 
                 <TextBlock Text="Next" FontSize="17" FontWeight="bold" Margin="10 10 10 0"/>
-                <Canvas Name="canvasNext" Grid.Row="1" Width="54" Height="54" Background="White" Margin="10"/>
+                <Canvas Name="canvasNext" Grid.Row="1" Width="54" Height="54" Background="White" Margin="5"/>
 
-                <TextBlock Text="Hold" Grid.Row="2" FontSize="17" FontWeight="bold" Margin="10 10 10 0"/>
-                <Canvas Name="canvasHold" Grid.Row="3" Width="54" Height="54" Background="White" Margin="10"/>
+                <TextBlock Text="Hold" Grid.Row="2" FontSize="17" FontWeight="bold" Margin="10 0 10 0"/>
+                <Canvas Name="canvasHold" Grid.Row="3" Width="54" Height="54" Background="White" Margin="5"/>
             </Grid>
 
             <Border
@@ -80,7 +80,7 @@
                 BorderBrush="Black"
                 CornerRadius="10"
                 BorderThickness="1"
-                Margin="10 0 10 0">
+                Margin="10 5 10 0">
                 <Button 
                     Name="btnTheme"
                     Content="색테마" 
@@ -105,10 +105,25 @@
                     Click="HelpClicked">
                 </Button>
             </Border>
-            
+
             <Border
-                Name="border"
                 Grid.Row="5"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="10 5 10 0">
+                <Button 
+                    Name="btnMulti"
+                    Content="멀티플레이" 
+                    Style="{StaticResource RadialButton}"
+                    Focusable="False"
+                    Click="MultiClicked">
+                </Button>
+            </Border>
+
+            <Border
+                Grid.Row="6"
                 Background="White"
                 BorderBrush="Black"
                 BorderThickness="1"
